@@ -104,7 +104,7 @@ class ViewController: UIViewController {
         self.welcomeLabel!.text = "Welcome To " + (usernameTextField?.text)!
         let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: reuseIdentifierForHomeViewController) as! HomeViewController
         
-        homeViewController.container = self.usernameTextField?.text
+        homeViewController.container = self.usernameTextField?.text  //forward navigation -- step 2
         
         //you can present a viewController without pushing it on navigation stack
 //        let thirdViewController = self.storyboard?.instantiateViewController(withIdentifier: reuseIdentifierForThirdViewController) as! ThirdViewController

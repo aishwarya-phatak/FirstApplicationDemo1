@@ -14,12 +14,14 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var imageView1: UIImageView!
     @IBOutlet weak var btnLogin: UIButton!
-    var container : String?
+    var container : String?         //forward navigation -- step 1
     
     override func viewDidLoad() {
         print("viewDidLoad method of HomeViewController is called")
         super.viewDidLoad()
-        self.welcomeMessageLabel.text = container!
+        
+        self.welcomeMessageLabel.text = container!          //forward navigation -- step 3
+        
         btnLogin.setTitle("Login", for: .normal)
         btnLogin.backgroundColor = .lightGray
         self.imageView1.image = UIImage(named: "bitcode_image")
@@ -47,8 +49,6 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func btnLoginClick(_ sender: Any) {
-        
-       
         
 //        self.welcomeMessageLabel.text = "Welcome To " + usernameTextField.text!
         navigationController?.popViewController(animated: true)
