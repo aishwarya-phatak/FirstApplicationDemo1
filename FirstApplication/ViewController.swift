@@ -9,20 +9,34 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
-    
-    
-    
-    
     //creating UI through code
     var welcomeLabel : UILabel?
     var usernameTextField : UITextField?
     var passwordTextField : UITextField?
     var btnLogin : UIButton?
+    let reuseIdentifierForHomeViewController = "HomeViewController"
+    let reuseIdentifierForThirdViewController = "ThirdViewController"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("viewDidLoad method of ViewController is called")
         loginPageUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("viewWillAppear method of ViewController is called")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("viewDidAppear method of ViewController is called")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("viewWillDisappear method of ViewCOntroller is called")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("viewDidDisappeaar method of ViewComtroller is called")
     }
     
     func loginPageUI(){
@@ -88,5 +102,14 @@ class ViewController: UIViewController {
     
     @objc func btnLoginClicked(){
         self.welcomeLabel!.text = "Welcome To " + (usernameTextField?.text)!
+        let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: reuseIdentifierForHomeViewController) as! HomeViewController
+        
+        homeViewController.container = self.usernameTextField?.text
+        
+        //you can present a viewController without pushing it on navigation stack
+//        let thirdViewController = self.storyboard?.instantiateViewController(withIdentifier: reuseIdentifierForThirdViewController) as! ThirdViewController
+//        self.navigationController?.present(thirdViewController, animated: true)
+        
+        self.navigationController?.pushViewController(homeViewController, animated: true)
     }
 }

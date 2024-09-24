@@ -14,6 +14,7 @@
 		6810663A2C9AEA72000DFEF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 681066392C9AEA72000DFEF3 /* Assets.xcassets */; };
 		6810663D2C9AEA72000DFEF3 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6810663C2C9AEA72000DFEF3 /* Base */; };
 		681066452C9AEC60000DFEF3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681066442C9AEC60000DFEF3 /* HomeViewController.swift */; };
+		68633DDE2CA136C3009E0B06 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68633DDD2CA136C3009E0B06 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		6810663C2C9AEA72000DFEF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6810663E2C9AEA72000DFEF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		681066442C9AEC60000DFEF3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		68633DDD2CA136C3009E0B06 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				6810663B2C9AEA72000DFEF3 /* LaunchScreen.storyboard */,
 				6810663E2C9AEA72000DFEF3 /* Info.plist */,
 				681066442C9AEC60000DFEF3 /* HomeViewController.swift */,
+				68633DDD2CA136C3009E0B06 /* ThirdViewController.swift */,
 			);
 			path = FirstApplication;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				681066352C9AEA70000DFEF3 /* ViewController.swift in Sources */,
 				681066312C9AEA70000DFEF3 /* AppDelegate.swift in Sources */,
+				68633DDE2CA136C3009E0B06 /* ThirdViewController.swift in Sources */,
 				681066332C9AEA70000DFEF3 /* SceneDelegate.swift in Sources */,
 				681066452C9AEC60000DFEF3 /* HomeViewController.swift in Sources */,
 			);
