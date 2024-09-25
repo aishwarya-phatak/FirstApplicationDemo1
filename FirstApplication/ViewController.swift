@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     var btnLogin : UIButton?
     let reuseIdentifierForHomeViewController = "HomeViewController"
     let reuseIdentifierForThirdViewController = "ThirdViewController"
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad method of ViewController is called")
@@ -86,7 +86,7 @@ class ViewController: UIViewController {
                                   y: 280,
                                   width: 200,
                                   height: 40)
-    
+        
         btnLogin = UIButton(frame: cgRectButton)
         btnLogin!.setTitle("Login", for: .normal)
         btnLogin!.setTitleColor(.black, for: .normal)
@@ -94,8 +94,8 @@ class ViewController: UIViewController {
         
         //Way 1 --> of adding action on button click by objective-C syntax
         btnLogin!.addTarget(self,
-                           action: #selector(btnLoginClicked),
-                           for: .touchUpInside)
+                            action: #selector(btnLoginClicked),
+                            for: .touchUpInside)
         
         self.view.addSubview(btnLogin!)
     }
@@ -105,11 +105,17 @@ class ViewController: UIViewController {
         let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: reuseIdentifierForHomeViewController) as! HomeViewController
         
         homeViewController.container = self.usernameTextField?.text  //forward navigation -- step 2
+        //        self.navigationController?.pushViewController(homeViewController, animated: true)
+        /Users/vishaljagtap/Library/Developer/Xcode/DerivedData/FirstApplication-eabpocxhsjifsrhiihiqjxfmjfei/Build/Intermediates.noindex/FirstApplication.build/Debug-iphonesimulator/FirstApplication.build/DerivedSources/GeneratedAssetSymbols.swift
         
         //you can present a viewController without pushing it on navigation stack
-//        let thirdViewController = self.storyboard?.instantiateViewController(withIdentifier: reuseIdentifierForThirdViewController) as! ThirdViewController
-//        self.navigationController?.present(thirdViewController, animated: true)
+        let thirdViewController = self.storyboard?.instantiateViewController(withIdentifier: reuseIdentifierForThirdViewController) as! ThirdViewController
         
-        self.navigationController?.pushViewController(homeViewController, animated: true)
+        self.navigationController?.present(thirdViewController, animated: true)
+        
+        
+        //implementation of protocol methods 
+        thirdViewController.subtraction(n1: 1020, n2: 20)
+        thirdViewController.multiplication()
     }
 }

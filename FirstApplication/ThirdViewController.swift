@@ -7,8 +7,10 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
-
+class ThirdViewController: UIViewController, MathematicalOperations{
+    
+    //conforming to MathematicalOperations Protocol
+    
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -26,5 +28,25 @@ class ThirdViewController: UIViewController {
         } else {
             print("Login Failed!")
         }
+    }
+    
+    func addition(n1: Int, n2: Int) {
+        print(n1 + n2)
+    }
+    
+    func subtraction(n1: Int, n2: Int) {
+        print(n1 - n2)
+    }
+    
+    func multiplication() {
+        var n : Int = 10
+        var m : Int = 14
+        print(n * m)
+    }
+    
+    func division() {
+        var x : Int = 9
+        var y : Int = 10
+        print(x / y)
     }
 }
