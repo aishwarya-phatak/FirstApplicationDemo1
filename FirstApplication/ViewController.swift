@@ -106,7 +106,6 @@ class ViewController: UIViewController {
         
         homeViewController.container = self.usernameTextField?.text  //forward navigation -- step 2
         //        self.navigationController?.pushViewController(homeViewController, animated: true)
-        /Users/vishaljagtap/Library/Developer/Xcode/DerivedData/FirstApplication-eabpocxhsjifsrhiihiqjxfmjfei/Build/Intermediates.noindex/FirstApplication.build/Debug-iphonesimulator/FirstApplication.build/DerivedSources/GeneratedAssetSymbols.swift
         
         //you can present a viewController without pushing it on navigation stack
         let thirdViewController = self.storyboard?.instantiateViewController(withIdentifier: reuseIdentifierForThirdViewController) as! ThirdViewController
